@@ -1,11 +1,7 @@
 import React, { lazy, Suspense } from "react";
 import ReactDOM from "react-dom/client";
 import "./index.css";
-import {
-	createBrowserRouter,
-	Navigate,
-	RouterProvider,
-} from "react-router-dom";
+import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import store from "./store/store";
 import { Provider } from "react-redux";
 import SearchQueryWrapper from "./lib/hooks/useSearchQuery";
@@ -36,7 +32,7 @@ const router = createBrowserRouter(
 			element: <TaskPage />,
 		},
 	],
-	{ basename: "/tasks" }
+	{ basename: "/tasks/" }
 );
 
 ReactDOM.createRoot(document.getElementById("root")).render(
